@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import expense
+from expenses import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('expense/<int:id>/', expense.get_expense),
-    path('expense/submit/', expense.submit_expense)
+    path('expense/<int:id>/', views.get_expense),
+    path('expense/submit/', views.submit_expense)
 ]
