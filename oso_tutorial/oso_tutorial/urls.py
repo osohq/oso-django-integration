@@ -20,6 +20,6 @@ from expenses import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('expense/<int:id>/', views.get_expense),
-    path('expense/submit/', views.submit_expense)
+    path('expense/<int:id>/', views.expense.get_expense),
+    path('expense/submit/', views.expense.submit_expense)
 ]

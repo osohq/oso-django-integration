@@ -1,3 +1,5 @@
+import json
+
 from django.db import models
 
 class Expense(models.Model):
@@ -10,6 +12,18 @@ class Expense(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def json(self):
+        return json.dumps({
+            'id': self.id,
+            'amount': self.amount,
+            'user_id': self.user.id,
+            'description': self.description
+        })
+
+    @classmethod
+    def from_json(self, data):
+        return self(**data)
+
 class Organization(models.Model):
     id = models.IntegerField(primary_key=True)
 
@@ -18,7 +32,6 @@ class Organization(models.Model):
     id = models.IntegerField(primary_key=True)
 
 class User(models.Model):
-
     email = models.CharField(max_length=256)
     title = models.CharField(max_length=256)
 

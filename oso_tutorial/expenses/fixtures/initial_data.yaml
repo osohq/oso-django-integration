@@ -1,0 +1,928 @@
+# Organizations
+- model: expenses.Organization
+  pk: 1
+  fields:
+    name: Foo Industries
+- model: expenses.Organization
+  pk: 2
+  fields:
+    name: Bar, Inc.
+
+# Users
+
+- model: expenses.User
+  pk: 1
+  fields:
+    email: alice@foo.com
+    title: CEO
+    location_id: 1
+    organization_id: 1
+    manager_id: null
+- model: expenses.User
+  pk: 2
+  fields:
+    email: keri@foo.com
+    title: CFO
+    location_id: 3
+    organization_id: 1
+    manager_id: 1
+- model: expenses.User
+  pk: 3
+  fields:
+    email: bhavik@foo.com
+    title: Senior Accountant
+    location_id: 1
+    organization_id: 1
+    manager_id: 2
+- model: expenses.User
+  pk: 4
+  fields:
+    email: cora@foo.com
+    title: Accountant
+    location_id: 1
+    organization_id: 1
+    manager_id: 3
+- model: expenses.User
+  pk: 5
+  fields:
+    email: deirdre@foo.com
+    title: Director of Engineering
+    location_id: 1
+    organization_id: 1
+    manager_id: 1
+- model: expenses.User
+  pk: 6
+  fields:
+    email: ebrahim@foo.com
+    title: Engineering Manager
+    location_id: 1
+    organization_id: 1
+    manager_id: 5
+- model: expenses.User
+  pk: 7
+  fields:
+    email: frantz@foo.com
+    title: Software Engineer
+    location_id: 1
+    organization_id: 1
+    manager_id: 6
+- model: expenses.User
+  pk: 8
+  fields:
+    email: greta@foo.com
+    title: Director of Sales
+    location_id: 1
+    organization_id: 1
+    manager_id: 1
+- model: expenses.User
+  pk: 9
+  fields:
+    email: han@foo.com
+    title: Regional Sales Manager
+    location_id: 2
+    organization_id: 1
+    manager_id: 8
+- model: expenses.User
+  pk: 10
+  fields:
+    email: iqbal@foo.com
+    title: Sales Rep
+    location_id: 2
+    organization_id: 1
+    manager_id: 9
+- model: expenses.User
+  pk: 11
+  fields:
+    email: jose@foo.com
+    title: Accountant
+    location_id: 2
+    organization_id: 1
+    manager_id: 3
+- model: expenses.User
+  pk: 12
+  fields:
+    email: lola@foo.com
+    title: CTO
+    location_id: 3
+    organization_id: 1
+    manager_id: 1
+- model: expenses.User
+  pk: 13
+  fields:
+    email: matz@foo.com
+    title: CEO
+    location_id: 1
+    organization_id: 2
+    manager_id: null
+
+# Expenses
+
+- model: expenses.Expense
+  pk: 1
+  fields:
+    user_id: 4
+    amount: 64165
+    description: Trust fund pour-over.
+    created_at: '2020-07-23 01:59:26.793029'
+    updated_at: '2020-07-23 01:59:26.793029'
+- model: expenses.Expense
+  pk: 2
+  fields:
+    user_id: 1
+    amount: 17743
+    description: Pug irony.
+    created_at: '2020-07-23 01:59:26.829541'
+    updated_at: '2020-07-23 01:59:26.829541'
+- model: expenses.Expense
+  pk: 3
+  fields:
+    user_id: 12
+    amount: 8092
+    description: Gastropub viral.
+    created_at: '2020-07-23 01:59:26.862951'
+    updated_at: '2020-07-23 01:59:26.862951'
+- model: expenses.Expense
+  pk: 4
+  fields:
+    user_id: 3
+    amount: 55013
+    description: Intelligentsia health.
+    created_at: '2020-07-23 01:59:26.902323'
+    updated_at: '2020-07-23 01:59:26.902323'
+- model: expenses.Expense
+  pk: 5
+  fields:
+    user_id: 11
+    amount: 7703
+    description: Paleo kickstarter.
+    created_at: '2020-07-23 01:59:26.944763'
+    updated_at: '2020-07-23 01:59:26.944763'
+- model: expenses.Expense
+  pk: 6
+  fields:
+    user_id: 10
+    amount: 6022
+    description: Plaid tote bag.
+    created_at: '2020-07-23 01:59:26.977392'
+    updated_at: '2020-07-23 01:59:26.977392'
+- model: expenses.Expense
+  pk: 7
+  fields:
+    user_id: 4
+    amount: 1075
+    description: Locavore migas.
+    created_at: '2020-07-23 01:59:27.006154'
+    updated_at: '2020-07-23 01:59:27.006154'
+- model: expenses.Expense
+  pk: 8
+  fields:
+    user_id: 2
+    amount: 72414
+    description: Diy semiotics.
+    created_at: '2020-07-23 01:59:27.055030'
+    updated_at: '2020-07-23 01:59:27.055030'
+- model: expenses.Expense
+  pk: 9
+  fields:
+    user_id: 5
+    amount: 62919
+    description: Retro pabst.
+    created_at: '2020-07-23 01:59:27.097562'
+    updated_at: '2020-07-23 01:59:27.097562'
+- model: expenses.Expense
+  pk: 10
+  fields:
+    user_id: 12
+    amount: 82684
+    description: Shabby chic brooklyn.
+    created_at: '2020-07-23 01:59:27.132183'
+    updated_at: '2020-07-23 01:59:27.132183'
+- model: expenses.Expense
+  pk: 11
+  fields:
+    user_id: 9
+    amount: 20696
+    description: Biodiesel chartreuse.
+    created_at: '2020-07-23 01:59:27.165553'
+    updated_at: '2020-07-23 01:59:27.165553'
+- model: expenses.Expense
+  pk: 12
+  fields:
+    user_id: 5
+    amount: 29639
+    description: Swag cornhole.
+    created_at: '2020-07-23 01:59:27.210909'
+    updated_at: '2020-07-23 01:59:27.210909'
+- model: expenses.Expense
+  pk: 13
+  fields:
+    user_id: 10
+    amount: 92267
+    description: Tilde ramps.
+    created_at: '2020-07-23 01:59:27.248681'
+    updated_at: '2020-07-23 01:59:27.248681'
+- model: expenses.Expense
+  pk: 14
+  fields:
+    user_id: 9
+    amount: 75724
+    description: Yolo butcher.
+    created_at: '2020-07-23 01:59:27.277687'
+    updated_at: '2020-07-23 01:59:27.277687'
+- model: expenses.Expense
+  pk: 15
+  fields:
+    user_id: 10
+    amount: 40051
+    description: Carry pinterest.
+    created_at: '2020-07-23 01:59:27.316445'
+    updated_at: '2020-07-23 01:59:27.316445'
+- model: expenses.Expense
+  pk: 16
+  fields:
+    user_id: 12
+    amount: 60910
+    description: Food truck ethical.
+    created_at: '2020-07-23 01:59:27.355072'
+    updated_at: '2020-07-23 01:59:27.355072'
+- model: expenses.Expense
+  pk: 17
+  fields:
+    user_id: 5
+    amount: 35384
+    description: Polaroid mlkshk.
+    created_at: '2020-07-23 01:59:27.394964'
+    updated_at: '2020-07-23 01:59:27.394964'
+- model: expenses.Expense
+  pk: 18
+  fields:
+    user_id: 6
+    amount: 42905
+    description: Sustainable humblebrag.
+    created_at: '2020-07-23 01:59:27.436173'
+    updated_at: '2020-07-23 01:59:27.436173'
+- model: expenses.Expense
+  pk: 19
+  fields:
+    user_id: 7
+    amount: 53212
+    description: Ugh master.
+    created_at: '2020-07-23 01:59:27.472859'
+    updated_at: '2020-07-23 01:59:27.472859'
+- model: expenses.Expense
+  pk: 20
+  fields:
+    user_id: 1
+    amount: 55754
+    description: Bitters hashtag.
+    created_at: '2020-07-23 01:59:27.507571'
+    updated_at: '2020-07-23 01:59:27.507571'
+- model: expenses.Expense
+  pk: 21
+  fields:
+    user_id: 12
+    amount: 4376
+    description: 8-bit dreamcatcher.
+    created_at: '2020-07-23 01:59:27.548086'
+    updated_at: '2020-07-23 01:59:27.548086'
+- model: expenses.Expense
+  pk: 22
+  fields:
+    user_id: 3
+    amount: 8772
+    description: Blog vhs.
+    created_at: '2020-07-23 01:59:27.582775'
+    updated_at: '2020-07-23 01:59:27.582775'
+- model: expenses.Expense
+  pk: 23
+  fields:
+    user_id: 5
+    amount: 93244
+    description: Gentrify flannel.
+    created_at: '2020-07-23 01:59:27.611932'
+    updated_at: '2020-07-23 01:59:27.611932'
+- model: expenses.Expense
+  pk: 24
+  fields:
+    user_id: 3
+    amount: 13393
+    description: Blog distillery.
+    created_at: '2020-07-23 01:59:27.647973'
+    updated_at: '2020-07-23 01:59:27.647973'
+- model: expenses.Expense
+  pk: 25
+  fields:
+    user_id: 2
+    amount: 70243
+    description: Vinegar meh.
+    created_at: '2020-07-23 01:59:27.689016'
+    updated_at: '2020-07-23 01:59:27.689016'
+- model: expenses.Expense
+  pk: 26
+  fields:
+    user_id: 9
+    amount: 4656
+    description: Portland semiotics.
+    created_at: '2020-07-23 01:59:27.718580'
+    updated_at: '2020-07-23 01:59:27.718580'
+- model: expenses.Expense
+  pk: 27
+  fields:
+    user_id: 2
+    amount: 28668
+    description: Sartorial mlkshk.
+    created_at: '2020-07-23 01:59:27.748297'
+    updated_at: '2020-07-23 01:59:27.748297'
+- model: expenses.Expense
+  pk: 28
+  fields:
+    user_id: 8
+    amount: 59060
+    description: Cornhole meh.
+    created_at: '2020-07-23 01:59:27.789877'
+    updated_at: '2020-07-23 01:59:27.789877'
+- model: expenses.Expense
+  pk: 29
+  fields:
+    user_id: 4
+    amount: 3914
+    description: Beard narwhal.
+    created_at: '2020-07-23 01:59:27.831786'
+    updated_at: '2020-07-23 01:59:27.831786'
+- model: expenses.Expense
+  pk: 30
+  fields:
+    user_id: 8
+    amount: 73241
+    description: Flexitarian farm-to-table.
+    created_at: '2020-07-23 01:59:27.867501'
+    updated_at: '2020-07-23 01:59:27.867501'
+- model: expenses.Expense
+  pk: 31
+  fields:
+    user_id: 10
+    amount: 84047
+    description: Chambray vice.
+    created_at: '2020-07-23 01:59:27.899671'
+    updated_at: '2020-07-23 01:59:27.899671'
+- model: expenses.Expense
+  pk: 32
+  fields:
+    user_id: 6
+    amount: 22716
+    description: Occupy bespoke.
+    created_at: '2020-07-23 01:59:27.937669'
+    updated_at: '2020-07-23 01:59:27.937669'
+- model: expenses.Expense
+  pk: 33
+  fields:
+    user_id: 11
+    amount: 46972
+    description: You probably havent heard of them mustache.
+    created_at: '2020-07-23 01:59:27.969329'
+    updated_at: '2020-07-23 01:59:27.969329'
+- model: expenses.Expense
+  pk: 34
+  fields:
+    user_id: 8
+    amount: 71749
+    description: Church-key locavore.
+    created_at: '2020-07-23 01:59:28.015755'
+    updated_at: '2020-07-23 01:59:28.015755'
+- model: expenses.Expense
+  pk: 35
+  fields:
+    user_id: 12
+    amount: 93152
+    description: Sustainable portland.
+    created_at: '2020-07-23 01:59:28.054563'
+    updated_at: '2020-07-23 01:59:28.054563'
+- model: expenses.Expense
+  pk: 36
+  fields:
+    user_id: 3
+    amount: 94527
+    description: Diy chillwave.
+    created_at: '2020-07-23 01:59:28.088886'
+    updated_at: '2020-07-23 01:59:28.088886'
+- model: expenses.Expense
+  pk: 37
+  fields:
+    user_id: 6
+    amount: 62378
+    description: Vhs poutine.
+    created_at: '2020-07-23 01:59:28.129478'
+    updated_at: '2020-07-23 01:59:28.129478'
+- model: expenses.Expense
+  pk: 38
+  fields:
+    user_id: 6
+    amount: 33062
+    description: Etsy scenester.
+    created_at: '2020-07-23 01:59:28.163469'
+    updated_at: '2020-07-23 01:59:28.163469'
+- model: expenses.Expense
+  pk: 39
+  fields:
+    user_id: 12
+    amount: 73320
+    description: Vhs carry.
+    created_at: '2020-07-23 01:59:28.197837'
+    updated_at: '2020-07-23 01:59:28.197837'
+- model: expenses.Expense
+  pk: 40
+  fields:
+    user_id: 9
+    amount: 67408
+    description: Slow-carb art party.
+    created_at: '2020-07-23 01:59:28.245418'
+    updated_at: '2020-07-23 01:59:28.245418'
+- model: expenses.Expense
+  pk: 41
+  fields:
+    user_id: 11
+    amount: 63633
+    description: Banh mi cleanse.
+    created_at: '2020-07-23 01:59:28.282211'
+    updated_at: '2020-07-23 01:59:28.282211'
+- model: expenses.Expense
+  pk: 42
+  fields:
+    user_id: 1
+    amount: 21737
+    description: Selfies loko.
+    created_at: '2020-07-23 01:59:28.316213'
+    updated_at: '2020-07-23 01:59:28.316213'
+- model: expenses.Expense
+  pk: 43
+  fields:
+    user_id: 1
+    amount: 45714
+    description: Phlogiston hoodie.
+    created_at: '2020-07-23 01:59:28.355364'
+    updated_at: '2020-07-23 01:59:28.355364'
+- model: expenses.Expense
+  pk: 44
+  fields:
+    user_id: 11
+    amount: 81268
+    description: Slow-carb tote bag.
+    created_at: '2020-07-23 01:59:28.390195'
+    updated_at: '2020-07-23 01:59:28.390195'
+- model: expenses.Expense
+  pk: 45
+  fields:
+    user_id: 1
+    amount: 79875
+    description: Waistcoat lumbersexual.
+    created_at: '2020-07-23 01:59:28.429581'
+    updated_at: '2020-07-23 01:59:28.429581'
+- model: expenses.Expense
+  pk: 46
+  fields:
+    user_id: 8
+    amount: 77942
+    description: Echo polaroid.
+    created_at: '2020-07-23 01:59:28.470106'
+    updated_at: '2020-07-23 01:59:28.470106'
+- model: expenses.Expense
+  pk: 47
+  fields:
+    user_id: 3
+    amount: 82163
+    description: Deep v migas.
+    created_at: '2020-07-23 01:59:28.510865'
+    updated_at: '2020-07-23 01:59:28.510865'
+- model: expenses.Expense
+  pk: 48
+  fields:
+    user_id: 12
+    amount: 54165
+    description: Swag trust fund.
+    created_at: '2020-07-23 01:59:28.542343'
+    updated_at: '2020-07-23 01:59:28.542343'
+- model: expenses.Expense
+  pk: 49
+  fields:
+    user_id: 2
+    amount: 10209
+    description: Whatever viral.
+    created_at: '2020-07-23 01:59:28.578791'
+    updated_at: '2020-07-23 01:59:28.578791'
+- model: expenses.Expense
+  pk: 50
+  fields:
+    user_id: 3
+    amount: 21358
+    description: Farm-to-table lomo.
+    created_at: '2020-07-23 01:59:28.610228'
+    updated_at: '2020-07-23 01:59:28.610228'
+- model: expenses.Expense
+  pk: 51
+  fields:
+    user_id: 7
+    amount: 90780
+    description: Typewriter carry.
+    created_at: '2020-07-23 01:59:28.649679'
+    updated_at: '2020-07-23 01:59:28.649679'
+- model: expenses.Expense
+  pk: 52
+  fields:
+    user_id: 11
+    amount: 22351
+    description: Quinoa neutra.
+    created_at: '2020-07-23 01:59:28.672660'
+    updated_at: '2020-07-23 01:59:28.672660'
+- model: expenses.Expense
+  pk: 53
+  fields:
+    user_id: 7
+    amount: 12513
+    description: Squid iphone.
+    created_at: '2020-07-23 01:59:28.715897'
+    updated_at: '2020-07-23 01:59:28.715897'
+- model: expenses.Expense
+  pk: 54
+  fields:
+    user_id: 3
+    amount: 74361
+    description: Vhs mumblecore.
+    created_at: '2020-07-23 01:59:28.756867'
+    updated_at: '2020-07-23 01:59:28.756867'
+- model: expenses.Expense
+  pk: 55
+  fields:
+    user_id: 11
+    amount: 56747
+    description: Iphone salvia.
+    created_at: '2020-07-23 01:59:28.783876'
+    updated_at: '2020-07-23 01:59:28.783876'
+- model: expenses.Expense
+  pk: 56
+  fields:
+    user_id: 11
+    amount: 97009
+    description: Crucifix distillery.
+    created_at: '2020-07-23 01:59:28.824702'
+    updated_at: '2020-07-23 01:59:28.824702'
+- model: expenses.Expense
+  pk: 57
+  fields:
+    user_id: 5
+    amount: 62993
+    description: Bicycle rights quinoa.
+    created_at: '2020-07-23 01:59:28.864023'
+    updated_at: '2020-07-23 01:59:28.864023'
+- model: expenses.Expense
+  pk: 58
+  fields:
+    user_id: 5
+    amount: 47652
+    description: Pbr&b leggings.
+    created_at: '2020-07-23 01:59:28.908834'
+    updated_at: '2020-07-23 01:59:28.908834'
+- model: expenses.Expense
+  pk: 59
+  fields:
+    user_id: 2
+    amount: 53979
+    description: Xoxo celiac.
+    created_at: '2020-07-23 01:59:28.941396'
+    updated_at: '2020-07-23 01:59:28.941396'
+- model: expenses.Expense
+  pk: 60
+  fields:
+    user_id: 12
+    amount: 47715
+    description: Tousled ugh.
+    created_at: '2020-07-23 01:59:28.966652'
+    updated_at: '2020-07-23 01:59:28.966652'
+- model: expenses.Expense
+  pk: 61
+  fields:
+    user_id: 3
+    amount: 40337
+    description: Tofu viral.
+    created_at: '2020-07-23 01:59:28.994543'
+    updated_at: '2020-07-23 01:59:28.994543'
+- model: expenses.Expense
+  pk: 62
+  fields:
+    user_id: 4
+    amount: 74212
+    description: Forage master.
+    created_at: '2020-07-23 01:59:29.023798'
+    updated_at: '2020-07-23 01:59:29.023798'
+- model: expenses.Expense
+  pk: 63
+  fields:
+    user_id: 2
+    amount: 2836
+    description: Echo drinking.
+    created_at: '2020-07-23 01:59:29.061061'
+    updated_at: '2020-07-23 01:59:29.061061'
+- model: expenses.Expense
+  pk: 64
+  fields:
+    user_id: 10
+    amount: 34003
+    description: Irony portland.
+    created_at: '2020-07-23 01:59:29.101656'
+    updated_at: '2020-07-23 01:59:29.101656'
+- model: expenses.Expense
+  pk: 65
+  fields:
+    user_id: 12
+    amount: 44382
+    description: Post-ironic stumptown.
+    created_at: '2020-07-23 01:59:29.135824'
+    updated_at: '2020-07-23 01:59:29.135824'
+- model: expenses.Expense
+  pk: 66
+  fields:
+    user_id: 2
+    amount: 89275
+    description: Phlogiston church-key.
+    created_at: '2020-07-23 01:59:29.169962'
+    updated_at: '2020-07-23 01:59:29.169962'
+- model: expenses.Expense
+  pk: 67
+  fields:
+    user_id: 12
+    amount: 52967
+    description: Mlkshk flannel.
+    created_at: '2020-07-23 01:59:29.197831'
+    updated_at: '2020-07-23 01:59:29.197831'
+- model: expenses.Expense
+  pk: 68
+  fields:
+    user_id: 12
+    amount: 18522
+    description: Synth green juice.
+    created_at: '2020-07-23 01:59:29.238667'
+    updated_at: '2020-07-23 01:59:29.238667'
+- model: expenses.Expense
+  pk: 69
+  fields:
+    user_id: 12
+    amount: 4736
+    description: Fashion axe semiotics.
+    created_at: '2020-07-23 01:59:29.274958'
+    updated_at: '2020-07-23 01:59:29.274958'
+- model: expenses.Expense
+  pk: 70
+  fields:
+    user_id: 8
+    amount: 46020
+    description: Bitters ennui.
+    created_at: '2020-07-23 01:59:29.311330'
+    updated_at: '2020-07-23 01:59:29.311330'
+- model: expenses.Expense
+  pk: 71
+  fields:
+    user_id: 12
+    amount: 7245
+    description: Williamsburg butcher.
+    created_at: '2020-07-23 01:59:29.345242'
+    updated_at: '2020-07-23 01:59:29.345242'
+- model: expenses.Expense
+  pk: 72
+  fields:
+    user_id: 9
+    amount: 46437
+    description: Polaroid occupy.
+    created_at: '2020-07-23 01:59:29.381216'
+    updated_at: '2020-07-23 01:59:29.381216'
+- model: expenses.Expense
+  pk: 73
+  fields:
+    user_id: 12
+    amount: 57370
+    description: Pop-up flexitarian.
+    created_at: '2020-07-23 01:59:29.421942'
+    updated_at: '2020-07-23 01:59:29.421942'
+- model: expenses.Expense
+  pk: 74
+  fields:
+    user_id: 8
+    amount: 92729
+    description: Tattooed brunch.
+    created_at: '2020-07-23 01:59:29.444160'
+    updated_at: '2020-07-23 01:59:29.444160'
+- model: expenses.Expense
+  pk: 75
+  fields:
+    user_id: 2
+    amount: 40273
+    description: Vinegar polaroid.
+    created_at: '2020-07-23 01:59:29.471505'
+    updated_at: '2020-07-23 01:59:29.471505'
+- model: expenses.Expense
+  pk: 76
+  fields:
+    user_id: 10
+    amount: 48961
+    description: Truffaut wolf.
+    created_at: '2020-07-23 01:59:29.506802'
+    updated_at: '2020-07-23 01:59:29.506802'
+- model: expenses.Expense
+  pk: 77
+  fields:
+    user_id: 12
+    amount: 19606
+    description: Lumbersexual tofu.
+    created_at: '2020-07-23 01:59:29.530067'
+    updated_at: '2020-07-23 01:59:29.530067'
+- model: expenses.Expense
+  pk: 78
+  fields:
+    user_id: 2
+    amount: 1413
+    description: Wes anderson drinking.
+    created_at: '2020-07-23 01:59:29.556927'
+    updated_at: '2020-07-23 01:59:29.556927'
+- model: expenses.Expense
+  pk: 79
+  fields:
+    user_id: 9
+    amount: 27631
+    description: Intelligentsia iphone.
+    created_at: '2020-07-23 01:59:29.612244'
+    updated_at: '2020-07-23 01:59:29.612244'
+- model: expenses.Expense
+  pk: 80
+  fields:
+    user_id: 12
+    amount: 8181
+    description: Selfies kogi.
+    created_at: '2020-07-23 01:59:29.658125'
+    updated_at: '2020-07-23 01:59:29.658125'
+- model: expenses.Expense
+  pk: 81
+  fields:
+    user_id: 6
+    amount: 35172
+    description: Skateboard synth.
+    created_at: '2020-07-23 01:59:29.698597'
+    updated_at: '2020-07-23 01:59:29.698597'
+- model: expenses.Expense
+  pk: 82
+  fields:
+    user_id: 3
+    amount: 50251
+    description: Umami fingerstache.
+    created_at: '2020-07-23 01:59:29.735382'
+    updated_at: '2020-07-23 01:59:29.735382'
+- model: expenses.Expense
+  pk: 83
+  fields:
+    user_id: 7
+    amount: 85491
+    description: Mumblecore sriracha.
+    created_at: '2020-07-23 01:59:29.782195'
+    updated_at: '2020-07-23 01:59:29.782195'
+- model: expenses.Expense
+  pk: 84
+  fields:
+    user_id: 5
+    amount: 23815
+    description: Deep v mlkshk.
+    created_at: '2020-07-23 01:59:29.812659'
+    updated_at: '2020-07-23 01:59:29.812659'
+- model: expenses.Expense
+  pk: 85
+  fields:
+    user_id: 3
+    amount: 67684
+    description: Church-key wes anderson.
+    created_at: '2020-07-23 01:59:29.853565'
+    updated_at: '2020-07-23 01:59:29.853565'
+- model: expenses.Expense
+  pk: 86
+  fields:
+    user_id: 5
+    amount: 91711
+    description: Williamsburg vhs.
+    created_at: '2020-07-23 01:59:29.885666'
+    updated_at: '2020-07-23 01:59:29.885666'
+- model: expenses.Expense
+  pk: 87
+  fields:
+    user_id: 6
+    amount: 11407
+    description: Mustache heirloom.
+    created_at: '2020-07-23 01:59:29.929122'
+    updated_at: '2020-07-23 01:59:29.929122'
+- model: expenses.Expense
+  pk: 88
+  fields:
+    user_id: 1
+    amount: 58385
+    description: Street shabby chic.
+    created_at: '2020-07-23 01:59:29.958955'
+    updated_at: '2020-07-23 01:59:29.958955'
+- model: expenses.Expense
+  pk: 89
+  fields:
+    user_id: 5
+    amount: 31278
+    description: Neutra bitters.
+    created_at: '2020-07-23 01:59:29.999538'
+    updated_at: '2020-07-23 01:59:29.999538'
+- model: expenses.Expense
+  pk: 90
+  fields:
+    user_id: 9
+    amount: 43679
+    description: Microdosing polaroid.
+    created_at: '2020-07-23 01:59:30.031723'
+    updated_at: '2020-07-23 01:59:30.031723'
+- model: expenses.Expense
+  pk: 91
+  fields:
+    user_id: 12
+    amount: 13581
+    description: Listicle squid.
+    created_at: '2020-07-23 01:59:30.072248'
+    updated_at: '2020-07-23 01:59:30.072248'
+- model: expenses.Expense
+  pk: 92
+  fields:
+    user_id: 4
+    amount: 72905
+    description: Whatever truffaut.
+    created_at: '2020-07-23 01:59:30.102800'
+    updated_at: '2020-07-23 01:59:30.102800'
+- model: expenses.Expense
+  pk: 93
+  fields:
+    user_id: 7
+    amount: 83728
+    description: Neutra banh mi.
+    created_at: '2020-07-23 01:59:30.135553'
+    updated_at: '2020-07-23 01:59:30.135553'
+- model: expenses.Expense
+  pk: 94
+  fields:
+    user_id: 2
+    amount: 40782
+    description: Taxidermy retro.
+    created_at: '2020-07-23 01:59:30.164569'
+    updated_at: '2020-07-23 01:59:30.164569'
+- model: expenses.Expense
+  pk: 95
+  fields:
+    user_id: 9
+    amount: 90313
+    description: Literally sartorial.
+    created_at: '2020-07-23 01:59:30.199102'
+    updated_at: '2020-07-23 01:59:30.199102'
+- model: expenses.Expense
+  pk: 96
+  fields:
+    user_id: 4
+    amount: 71548
+    description: Stumptown portland.
+    created_at: '2020-07-23 01:59:30.234590'
+    updated_at: '2020-07-23 01:59:30.234590'
+- model: expenses.Expense
+  pk: 97
+  fields:
+    user_id: 9
+    amount: 19812
+    description: 90s helvetica.
+    created_at: '2020-07-23 01:59:30.274835'
+    updated_at: '2020-07-23 01:59:30.274835'
+- model: expenses.Expense
+  pk: 98
+  fields:
+    user_id: 12
+    amount: 7354
+    description: Dreamcatcher yolo.
+    created_at: '2020-07-23 01:59:30.304072'
+    updated_at: '2020-07-23 01:59:30.304072'
+- model: expenses.Expense
+  pk: 99
+  fields:
+    user_id: 7
+    amount: 81731
+    description: Yr literally.
+    created_at: '2020-07-23 01:59:30.348982'
+    updated_at: '2020-07-23 01:59:30.348982'
+- model: expenses.Expense
+  pk: 100
+  fields:
+    user_id: 8
+    amount: 43546
+    description: Blue bottle pug.
+    created_at: '2020-07-23 01:59:30.391978'
+    updated_at: '2020-07-23 01:59:30.391978'
+- model: expenses.Expense
+  pk: 101
+  fields:
+    user_id: 13
+    amount: 45476
+    description: Hire a copywriter to create some job postings.
+    created_at: '2020-07-23 01:59:30.560484'
+    updated_at: '2020-07-23 01:59:30.560484'
+
