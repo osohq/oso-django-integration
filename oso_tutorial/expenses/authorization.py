@@ -6,7 +6,6 @@ class Guest:
         return "Guest"
 
 def get_user(get_response):
-
     def middleware(request):
         email = request.headers.get('user')
         if email:
