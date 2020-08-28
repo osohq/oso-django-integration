@@ -1,6 +1,6 @@
 from .models import User
 
-class Guest(Actor):
+class Guest:
     """Anonymous user."""
     def __str__(self):
         return "Guest"
@@ -11,6 +11,8 @@ def get_user(get_response):
         email = request.headers.get('user')
         if email:
             request.current_user = User.objects.filter(email=email).first()
+            if request.current_user is None:
+                raise ValueError("User not found")
         else:
             request.current_user = Guest()
 

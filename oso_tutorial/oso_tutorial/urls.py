@@ -20,6 +20,8 @@ from expenses import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('expense/<int:id>/', views.expense.get_expense),
-    path('expense/submit/', views.expense.submit_expense)
+    path('expenses/<int:id>/', views.expense.get_expense),
+    path('expenses/submit/', views.expense.submit_expense),
+    path('organizations/<init:id/', views.organization.get_organization),
+    path('whoami/', views.user.whoami)
 ]
