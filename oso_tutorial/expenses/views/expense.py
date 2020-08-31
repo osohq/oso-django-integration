@@ -3,6 +3,8 @@ import json
 from django.http import HttpResponse, HttpResponseNotFound
 from django.views.decorators.http import require_http_methods
 
+from django_oso.auth import authorize
+
 from expenses.models import Expense
 
 def get_expense(request, id):
@@ -11,6 +13,7 @@ def get_expense(request, id):
     except Expense.DoesNotExist:
         return HttpResponseNotFound()
 
+    authorize(request, expense, actor=request.current_user, action="read")
     return HttpResponse(expense.json())
 
 @require_http_methods(["PUT"])
