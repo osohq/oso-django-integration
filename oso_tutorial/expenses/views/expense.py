@@ -13,14 +13,14 @@ def get_expense(request, id):
     except Expense.DoesNotExist:
         return HttpResponseNotFound()
 
-    authorize(request, expense, actor=request.current_user, action="read")
+    authorize(request, expense, action="read")
     return HttpResponse(expense.json())
 
 @require_http_methods(["PUT"])
 def submit_expense(request):
     expense_data = json.loads(request.body)
 
-    expense_data.setdefault("user_id", request.current_user.id)
+    expense_data.setdefault("user_id", request.user.id)
 
     expense = Expense.from_json(expense_data)
     expense.save()

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'expenses.apps.ExpensesConfig',
-    'django_oso.apps.DjangoOsoConfig'
+    'django_oso'
 ]
 
 MIDDLEWARE = [
