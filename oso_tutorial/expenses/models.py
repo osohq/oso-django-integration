@@ -26,6 +26,12 @@ class Expense(models.Model):
 class Organization(models.Model):
     name = models.CharField(max_length=1024)
 
+    def json(self):
+        return json.dumps({
+            'id': self.id,
+            'name': self.name
+        })
+
 class User(models.Model):
     email = models.CharField(max_length=256)
     title = models.CharField(max_length=256)
@@ -33,3 +39,12 @@ class User(models.Model):
     location_id = models.IntegerField()
     organization = models.ForeignKey(Organization, models.CASCADE)
     manager = models.ForeignKey('User', models.SET_NULL, null=True)
+
+    def json(self):
+        return json.dumps({
+            'id': self.id,
+            'email': self.email,
+            'title': self.title,
+            'location_id': self.location_id,
+            'organization': self.organization.id,
+        })

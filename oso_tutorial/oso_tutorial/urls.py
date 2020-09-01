@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('expenses/<int:id>/', views.expense.get_expense),
     path('expenses/submit/', views.expense.submit_expense),
-    path('organizations/<init:id/', views.organization.get_organization),
+    path('organizations/<int:id>/', views.organization.get_organization),
     path('whoami/', views.user.whoami)
 ]
