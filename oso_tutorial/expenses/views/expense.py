@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.views.decorators.http import require_http_methods
 
 from django_oso.auth import authorize
+from django_oso.decorators import skip_authorization
 
 from expenses.models import Expense
 
@@ -17,6 +18,7 @@ def get_expense(request, id):
     return HttpResponse(expense.json())
 
 @require_http_methods(["PUT"])
+@skip_authorization
 def submit_expense(request):
     expense_data = json.loads(request.body)
 

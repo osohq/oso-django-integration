@@ -15,6 +15,14 @@ def authorize(request, resource, *, actor=None, action=None):
     if not authorized:
         raise PermissionDenied()
 
+def skip_authorization(request):
+    """Mark ``request`` as not requiring authorization.
+
+    Use with the :py:func:`django_oso.middleware.RequireAuthorization`
+    middleware to silence missing authorization errors.
+    """
+    _set_request_authorized(request)
+
 def request_authorized(request) -> bool:
     """Return ``true`` if ``request`` was authorized using :py:func:`authorize`."""
     return getattr(request, "_oso_authorized", False)
