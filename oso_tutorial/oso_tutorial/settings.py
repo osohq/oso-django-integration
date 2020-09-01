@@ -48,7 +48,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'expenses.authorization.get_user'
+    'expenses.authorization.get_user',
+    'django_oso.middleware.RequireAuthorization'
 ]
 
 ROOT_URLCONF = 'oso_tutorial.urls'
