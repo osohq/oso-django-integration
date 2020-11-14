@@ -3,14 +3,38 @@
 {% block contents %}
 
 <h1>Expenses</h1>
-{% for expense in expenses %}
+
+{% for cat, expenses in expenses %}
+<h2>{{cat.name|title}}</h2>
+
+
+<table border="1">
+    <tr>
+        <th width="5%">ID</th>
+        <th width="10%">Owner</th>
+        <th width="30%">Description</th>
+        <th width="10%">Amount</th>
+        <th width="20%">Organization</th>
+    </tr>
+    {% for expense in expenses %}
+    <tr>
+        <td>{{ expense.id }}</td>
+        <td>{{ expense.owner.username | title }}</td>
+        <td>{{ expense.description }}</td>
+        <td>${{ expense.amount }}</td>
+        <td>{{ expense.organization.name | title }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- {% for expense in expenses %}
 <p>
-    <em>@{{ expense.created_by.username }}</em>
-    {{ expense.contents }}
+    <em>@{{ expense.owner.username }}</em>
+    {{ expense.description }} ${{ expense.amount }}
     <em>{{ expense.created_at|date:"SHORT_DATETIME_FORMAT" }}</em> #{{ expense.id }}
-
 </p>
-{% endfor %}
+{% endfor %} -->
 
+{% endfor %}
 
 {% endblock %}

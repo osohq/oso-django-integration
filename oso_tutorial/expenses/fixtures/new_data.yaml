@@ -1,0 +1,1353 @@
+- model: expenses.expense
+  pk: 1
+  fields:
+    amount: 64165
+    description: Trust fund pour-over.
+    owner: 4
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:26.793029+00:00
+    updated_at: 2020-11-16 23:07:18.772982+00:00
+- model: expenses.expense
+  pk: 2
+  fields:
+    amount: 17743
+    description: Pug irony.
+    owner: 1
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:26.829541+00:00
+    updated_at: 2020-11-16 23:07:18.808790+00:00
+- model: expenses.expense
+  pk: 3
+  fields:
+    amount: 8092
+    description: Gastropub viral.
+    owner: 12
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:26.862951+00:00
+    updated_at: 2020-11-16 23:07:18.836253+00:00
+- model: expenses.expense
+  pk: 4
+  fields:
+    amount: 55013
+    description: Intelligentsia health.
+    owner: 3
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:26.902323+00:00
+    updated_at: 2020-11-16 23:07:18.853001+00:00
+- model: expenses.expense
+  pk: 5
+  fields:
+    amount: 7703
+    description: Paleo kickstarter.
+    owner: 11
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:26.944763+00:00
+    updated_at: 2020-11-16 23:07:18.873392+00:00
+- model: expenses.expense
+  pk: 6
+  fields:
+    amount: 6022
+    description: Plaid tote bag.
+    owner: 10
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:26.977392+00:00
+    updated_at: 2020-11-16 23:07:18.895603+00:00
+- model: expenses.expense
+  pk: 7
+  fields:
+    amount: 1075
+    description: Locavore migas.
+    owner: 4
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:27.006154+00:00
+    updated_at: 2020-11-16 23:07:18.915642+00:00
+- model: expenses.expense
+  pk: 8
+  fields:
+    amount: 72414
+    description: Diy semiotics.
+    owner: 2
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:27.055030+00:00
+    updated_at: 2020-11-16 23:07:18.953084+00:00
+- model: expenses.expense
+  pk: 9
+  fields:
+    amount: 62919
+    description: Retro pabst.
+    owner: 5
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:27.097562+00:00
+    updated_at: 2020-11-16 23:07:18.987087+00:00
+- model: expenses.expense
+  pk: 10
+  fields:
+    amount: 82684
+    description: Shabby chic brooklyn.
+    owner: 12
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:27.132183+00:00
+    updated_at: 2020-11-16 23:07:19.031883+00:00
+- model: expenses.expense
+  pk: 11
+  fields:
+    amount: 20696
+    description: Biodiesel chartreuse.
+    owner: 9
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:27.165553+00:00
+    updated_at: 2020-11-16 23:07:19.085116+00:00
+- model: expenses.expense
+  pk: 12
+  fields:
+    amount: 29639
+    description: Swag cornhole.
+    owner: 5
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:27.210909+00:00
+    updated_at: 2020-11-16 23:07:19.122489+00:00
+- model: expenses.expense
+  pk: 13
+  fields:
+    amount: 92267
+    description: Tilde ramps.
+    owner: 10
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:27.248681+00:00
+    updated_at: 2020-11-16 23:07:19.163748+00:00
+- model: expenses.expense
+  pk: 14
+  fields:
+    amount: 75724
+    description: Yolo butcher.
+    owner: 9
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:27.277687+00:00
+    updated_at: 2020-11-16 23:07:19.197553+00:00
+- model: expenses.expense
+  pk: 15
+  fields:
+    amount: 40051
+    description: Carry pinterest.
+    owner: 10
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:27.316445+00:00
+    updated_at: 2020-11-16 23:07:19.239707+00:00
+- model: expenses.expense
+  pk: 16
+  fields:
+    amount: 60910
+    description: Food truck ethical.
+    owner: 12
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:27.355072+00:00
+    updated_at: 2020-11-16 23:07:19.277144+00:00
+- model: expenses.expense
+  pk: 17
+  fields:
+    amount: 35384
+    description: Polaroid mlkshk.
+    owner: 5
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:27.394964+00:00
+    updated_at: 2020-11-16 23:07:19.318684+00:00
+- model: expenses.expense
+  pk: 18
+  fields:
+    amount: 42905
+    description: Sustainable humblebrag.
+    owner: 6
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:27.436173+00:00
+    updated_at: 2020-11-16 23:07:19.348680+00:00
+- model: expenses.expense
+  pk: 19
+  fields:
+    amount: 53212
+    description: Ugh master.
+    owner: 7
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:27.472859+00:00
+    updated_at: 2020-11-16 23:07:19.385971+00:00
+- model: expenses.expense
+  pk: 20
+  fields:
+    amount: 55754
+    description: Bitters hashtag.
+    owner: 1
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:27.507571+00:00
+    updated_at: 2020-11-16 23:07:19.420248+00:00
+- model: expenses.expense
+  pk: 21
+  fields:
+    amount: 4376
+    description: 8-bit dreamcatcher.
+    owner: 12
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:27.548086+00:00
+    updated_at: 2020-11-16 23:07:19.460477+00:00
+- model: expenses.expense
+  pk: 22
+  fields:
+    amount: 8772
+    description: Blog vhs.
+    owner: 3
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:27.582775+00:00
+    updated_at: 2020-11-16 23:07:19.505304+00:00
+- model: expenses.expense
+  pk: 23
+  fields:
+    amount: 93244
+    description: Gentrify flannel.
+    owner: 5
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:27.611932+00:00
+    updated_at: 2020-11-16 23:07:19.540126+00:00
+- model: expenses.expense
+  pk: 24
+  fields:
+    amount: 13393
+    description: Blog distillery.
+    owner: 3
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:27.647973+00:00
+    updated_at: 2020-11-16 23:07:19.582299+00:00
+- model: expenses.expense
+  pk: 25
+  fields:
+    amount: 70243
+    description: Vinegar meh.
+    owner: 2
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:27.689016+00:00
+    updated_at: 2020-11-16 23:07:19.615390+00:00
+- model: expenses.expense
+  pk: 26
+  fields:
+    amount: 4656
+    description: Portland semiotics.
+    owner: 9
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:27.718580+00:00
+    updated_at: 2020-11-16 23:07:19.647204+00:00
+- model: expenses.expense
+  pk: 27
+  fields:
+    amount: 28668
+    description: Sartorial mlkshk.
+    owner: 2
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:27.748297+00:00
+    updated_at: 2020-11-16 23:07:19.683783+00:00
+- model: expenses.expense
+  pk: 28
+  fields:
+    amount: 59060
+    description: Cornhole meh.
+    owner: 8
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:27.789877+00:00
+    updated_at: 2020-11-16 23:07:19.715989+00:00
+- model: expenses.expense
+  pk: 29
+  fields:
+    amount: 3914
+    description: Beard narwhal.
+    owner: 4
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:27.831786+00:00
+    updated_at: 2020-11-16 23:07:19.757143+00:00
+- model: expenses.expense
+  pk: 30
+  fields:
+    amount: 73241
+    description: Flexitarian farm-to-table.
+    owner: 8
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:27.867501+00:00
+    updated_at: 2020-11-16 23:07:19.795813+00:00
+- model: expenses.expense
+  pk: 31
+  fields:
+    amount: 84047
+    description: Chambray vice.
+    owner: 10
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:27.899671+00:00
+    updated_at: 2020-11-16 23:07:19.841322+00:00
+- model: expenses.expense
+  pk: 32
+  fields:
+    amount: 22716
+    description: Occupy bespoke.
+    owner: 6
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:27.937669+00:00
+    updated_at: 2020-11-16 23:07:19.872273+00:00
+- model: expenses.expense
+  pk: 33
+  fields:
+    amount: 46972
+    description: You probably havent heard of them mustache.
+    owner: 11
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:27.969329+00:00
+    updated_at: 2020-11-16 23:07:19.910082+00:00
+- model: expenses.expense
+  pk: 34
+  fields:
+    amount: 71749
+    description: Church-key locavore.
+    owner: 8
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.015755+00:00
+    updated_at: 2020-11-16 23:07:19.949640+00:00
+- model: expenses.expense
+  pk: 35
+  fields:
+    amount: 93152
+    description: Sustainable portland.
+    owner: 12
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:28.054563+00:00
+    updated_at: 2020-11-16 23:07:20.014200+00:00
+- model: expenses.expense
+  pk: 36
+  fields:
+    amount: 94527
+    description: Diy chillwave.
+    owner: 3
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:28.088886+00:00
+    updated_at: 2020-11-16 23:07:20.058108+00:00
+- model: expenses.expense
+  pk: 37
+  fields:
+    amount: 62378
+    description: Vhs poutine.
+    owner: 6
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:28.129478+00:00
+    updated_at: 2020-11-16 23:07:20.098064+00:00
+- model: expenses.expense
+  pk: 38
+  fields:
+    amount: 33062
+    description: Etsy scenester.
+    owner: 6
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:28.163469+00:00
+    updated_at: 2020-11-16 23:07:20.131833+00:00
+- model: expenses.expense
+  pk: 39
+  fields:
+    amount: 73320
+    description: Vhs carry.
+    owner: 12
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.197837+00:00
+    updated_at: 2020-11-16 23:07:20.170937+00:00
+- model: expenses.expense
+  pk: 40
+  fields:
+    amount: 67408
+    description: Slow-carb art party.
+    owner: 9
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:28.245418+00:00
+    updated_at: 2020-11-16 23:07:20.204919+00:00
+- model: expenses.expense
+  pk: 41
+  fields:
+    amount: 63633
+    description: Banh mi cleanse.
+    owner: 11
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.282211+00:00
+    updated_at: 2020-11-16 23:07:20.238299+00:00
+- model: expenses.expense
+  pk: 42
+  fields:
+    amount: 21737
+    description: Selfies loko.
+    owner: 1
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.316213+00:00
+    updated_at: 2020-11-16 23:07:20.272056+00:00
+- model: expenses.expense
+  pk: 43
+  fields:
+    amount: 45714
+    description: Phlogiston hoodie.
+    owner: 1
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.355364+00:00
+    updated_at: 2020-11-16 23:07:20.319524+00:00
+- model: expenses.expense
+  pk: 44
+  fields:
+    amount: 81268
+    description: Slow-carb tote bag.
+    owner: 11
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:28.390195+00:00
+    updated_at: 2020-11-16 23:07:20.355534+00:00
+- model: expenses.expense
+  pk: 45
+  fields:
+    amount: 79875
+    description: Waistcoat lumbersexual.
+    owner: 1
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.429581+00:00
+    updated_at: 2020-11-16 23:07:20.386306+00:00
+- model: expenses.expense
+  pk: 46
+  fields:
+    amount: 77942
+    description: Echo polaroid.
+    owner: 8
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:28.470106+00:00
+    updated_at: 2020-11-16 23:07:20.425033+00:00
+- model: expenses.expense
+  pk: 47
+  fields:
+    amount: 82163
+    description: Deep v migas.
+    owner: 3
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.510865+00:00
+    updated_at: 2020-11-16 23:07:20.465130+00:00
+- model: expenses.expense
+  pk: 48
+  fields:
+    amount: 54165
+    description: Swag trust fund.
+    owner: 12
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.542343+00:00
+    updated_at: 2020-11-16 23:07:20.497088+00:00
+- model: expenses.expense
+  pk: 49
+  fields:
+    amount: 10209
+    description: Whatever viral.
+    owner: 2
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:28.578791+00:00
+    updated_at: 2020-11-16 23:07:20.529301+00:00
+- model: expenses.expense
+  pk: 50
+  fields:
+    amount: 21358
+    description: Farm-to-table lomo.
+    owner: 3
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:28.610228+00:00
+    updated_at: 2020-11-16 23:07:20.571416+00:00
+- model: expenses.expense
+  pk: 51
+  fields:
+    amount: 90780
+    description: Typewriter carry.
+    owner: 7
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:28.649679+00:00
+    updated_at: 2020-11-16 23:07:20.602915+00:00
+- model: expenses.expense
+  pk: 52
+  fields:
+    amount: 22351
+    description: Quinoa neutra.
+    owner: 11
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:28.672660+00:00
+    updated_at: 2020-11-16 23:07:20.655464+00:00
+- model: expenses.expense
+  pk: 53
+  fields:
+    amount: 12513
+    description: Squid iphone.
+    owner: 7
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:28.715897+00:00
+    updated_at: 2020-11-16 23:07:20.690880+00:00
+- model: expenses.expense
+  pk: 54
+  fields:
+    amount: 74361
+    description: Vhs mumblecore.
+    owner: 3
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:28.756867+00:00
+    updated_at: 2020-11-16 23:07:20.729784+00:00
+- model: expenses.expense
+  pk: 55
+  fields:
+    amount: 56747
+    description: Iphone salvia.
+    owner: 11
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:28.783876+00:00
+    updated_at: 2020-11-16 23:07:20.763455+00:00
+- model: expenses.expense
+  pk: 56
+  fields:
+    amount: 97009
+    description: Crucifix distillery.
+    owner: 11
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.824702+00:00
+    updated_at: 2020-11-16 23:07:20.807921+00:00
+- model: expenses.expense
+  pk: 57
+  fields:
+    amount: 62993
+    description: Bicycle rights quinoa.
+    owner: 5
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:28.864023+00:00
+    updated_at: 2020-11-16 23:07:20.848731+00:00
+- model: expenses.expense
+  pk: 58
+  fields:
+    amount: 47652
+    description: Pbr&b leggings.
+    owner: 5
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:28.908834+00:00
+    updated_at: 2020-11-16 23:07:20.895986+00:00
+- model: expenses.expense
+  pk: 59
+  fields:
+    amount: 53979
+    description: Xoxo celiac.
+    owner: 2
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:28.941396+00:00
+    updated_at: 2020-11-16 23:07:20.925399+00:00
+- model: expenses.expense
+  pk: 60
+  fields:
+    amount: 47715
+    description: Tousled ugh.
+    owner: 12
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:28.966652+00:00
+    updated_at: 2020-11-16 23:07:20.959132+00:00
+- model: expenses.expense
+  pk: 61
+  fields:
+    amount: 40337
+    description: Tofu viral.
+    owner: 3
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:28.994543+00:00
+    updated_at: 2020-11-16 23:07:20.994633+00:00
+- model: expenses.expense
+  pk: 62
+  fields:
+    amount: 74212
+    description: Forage master.
+    owner: 4
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.023798+00:00
+    updated_at: 2020-11-16 23:07:21.036860+00:00
+- model: expenses.expense
+  pk: 63
+  fields:
+    amount: 2836
+    description: Echo drinking.
+    owner: 2
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:29.061061+00:00
+    updated_at: 2020-11-16 23:07:21.068423+00:00
+- model: expenses.expense
+  pk: 64
+  fields:
+    amount: 34003
+    description: Irony portland.
+    owner: 10
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:29.101656+00:00
+    updated_at: 2020-11-16 23:07:21.099786+00:00
+- model: expenses.expense
+  pk: 65
+  fields:
+    amount: 44382
+    description: Post-ironic stumptown.
+    owner: 12
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.135824+00:00
+    updated_at: 2020-11-16 23:07:21.137375+00:00
+- model: expenses.expense
+  pk: 66
+  fields:
+    amount: 89275
+    description: Phlogiston church-key.
+    owner: 2
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:29.169962+00:00
+    updated_at: 2020-11-16 23:07:21.178180+00:00
+- model: expenses.expense
+  pk: 67
+  fields:
+    amount: 52967
+    description: Mlkshk flannel.
+    owner: 12
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.197831+00:00
+    updated_at: 2020-11-16 23:07:21.220806+00:00
+- model: expenses.expense
+  pk: 68
+  fields:
+    amount: 18522
+    description: Synth green juice.
+    owner: 12
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.238667+00:00
+    updated_at: 2020-11-16 23:07:21.258400+00:00
+- model: expenses.expense
+  pk: 69
+  fields:
+    amount: 4736
+    description: Fashion axe semiotics.
+    owner: 12
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:29.274958+00:00
+    updated_at: 2020-11-16 23:07:21.295577+00:00
+- model: expenses.expense
+  pk: 70
+  fields:
+    amount: 46020
+    description: Bitters ennui.
+    owner: 8
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:29.311330+00:00
+    updated_at: 2020-11-16 23:07:21.332281+00:00
+- model: expenses.expense
+  pk: 71
+  fields:
+    amount: 7245
+    description: Williamsburg butcher.
+    owner: 12
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.345242+00:00
+    updated_at: 2020-11-16 23:07:21.376581+00:00
+- model: expenses.expense
+  pk: 72
+  fields:
+    amount: 46437
+    description: Polaroid occupy.
+    owner: 9
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:29.381216+00:00
+    updated_at: 2020-11-16 23:07:21.416366+00:00
+- model: expenses.expense
+  pk: 73
+  fields:
+    amount: 57370
+    description: Pop-up flexitarian.
+    owner: 12
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:29.421942+00:00
+    updated_at: 2020-11-16 23:07:21.453869+00:00
+- model: expenses.expense
+  pk: 74
+  fields:
+    amount: 92729
+    description: Tattooed brunch.
+    owner: 8
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:29.444160+00:00
+    updated_at: 2020-11-16 23:07:21.485815+00:00
+- model: expenses.expense
+  pk: 75
+  fields:
+    amount: 40273
+    description: Vinegar polaroid.
+    owner: 2
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:29.471505+00:00
+    updated_at: 2020-11-16 23:07:21.527990+00:00
+- model: expenses.expense
+  pk: 76
+  fields:
+    amount: 48961
+    description: Truffaut wolf.
+    owner: 10
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:29.506802+00:00
+    updated_at: 2020-11-16 23:07:21.564262+00:00
+- model: expenses.expense
+  pk: 77
+  fields:
+    amount: 19606
+    description: Lumbersexual tofu.
+    owner: 12
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:29.530067+00:00
+    updated_at: 2020-11-16 23:07:21.608394+00:00
+- model: expenses.expense
+  pk: 78
+  fields:
+    amount: 1413
+    description: Wes anderson drinking.
+    owner: 2
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:29.556927+00:00
+    updated_at: 2020-11-16 23:07:21.647420+00:00
+- model: expenses.expense
+  pk: 79
+  fields:
+    amount: 27631
+    description: Intelligentsia iphone.
+    owner: 9
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:29.612244+00:00
+    updated_at: 2020-11-16 23:07:21.690914+00:00
+- model: expenses.expense
+  pk: 80
+  fields:
+    amount: 8181
+    description: Selfies kogi.
+    owner: 12
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.658125+00:00
+    updated_at: 2020-11-16 23:07:21.728765+00:00
+- model: expenses.expense
+  pk: 81
+  fields:
+    amount: 35172
+    description: Skateboard synth.
+    owner: 6
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:29.698597+00:00
+    updated_at: 2020-11-16 23:07:21.771583+00:00
+- model: expenses.expense
+  pk: 82
+  fields:
+    amount: 50251
+    description: Umami fingerstache.
+    owner: 3
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.735382+00:00
+    updated_at: 2020-11-16 23:07:21.802541+00:00
+- model: expenses.expense
+  pk: 83
+  fields:
+    amount: 85491
+    description: Mumblecore sriracha.
+    owner: 7
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:29.782195+00:00
+    updated_at: 2020-11-16 23:07:21.844570+00:00
+- model: expenses.expense
+  pk: 84
+  fields:
+    amount: 23815
+    description: Deep v mlkshk.
+    owner: 5
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:29.812659+00:00
+    updated_at: 2020-11-16 23:07:21.880785+00:00
+- model: expenses.expense
+  pk: 85
+  fields:
+    amount: 67684
+    description: Church-key wes anderson.
+    owner: 3
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:29.853565+00:00
+    updated_at: 2020-11-16 23:07:21.914420+00:00
+- model: expenses.expense
+  pk: 86
+  fields:
+    amount: 91711
+    description: Williamsburg vhs.
+    owner: 5
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:29.885666+00:00
+    updated_at: 2020-11-16 23:07:21.962576+00:00
+- model: expenses.expense
+  pk: 87
+  fields:
+    amount: 11407
+    description: Mustache heirloom.
+    owner: 6
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:29.929122+00:00
+    updated_at: 2020-11-16 23:07:21.997871+00:00
+- model: expenses.expense
+  pk: 88
+  fields:
+    amount: 58385
+    description: Street shabby chic.
+    owner: 1
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:29.958955+00:00
+    updated_at: 2020-11-16 23:07:22.034823+00:00
+- model: expenses.expense
+  pk: 89
+  fields:
+    amount: 31278
+    description: Neutra bitters.
+    owner: 5
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:29.999538+00:00
+    updated_at: 2020-11-16 23:07:22.076766+00:00
+- model: expenses.expense
+  pk: 90
+  fields:
+    amount: 43679
+    description: Microdosing polaroid.
+    owner: 9
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:30.031723+00:00
+    updated_at: 2020-11-16 23:07:22.113346+00:00
+- model: expenses.expense
+  pk: 91
+  fields:
+    amount: 13581
+    description: Listicle squid.
+    owner: 12
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:30.072248+00:00
+    updated_at: 2020-11-16 23:07:22.151179+00:00
+- model: expenses.expense
+  pk: 92
+  fields:
+    amount: 72905
+    description: Whatever truffaut.
+    owner: 4
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:30.102800+00:00
+    updated_at: 2020-11-16 23:07:22.202869+00:00
+- model: expenses.expense
+  pk: 93
+  fields:
+    amount: 83728
+    description: Neutra banh mi.
+    owner: 7
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:30.135553+00:00
+    updated_at: 2020-11-16 23:07:22.247292+00:00
+- model: expenses.expense
+  pk: 94
+  fields:
+    amount: 40782
+    description: Taxidermy retro.
+    owner: 2
+    organization: 1
+    category: 3
+    created_at: 2020-07-23 01:59:30.164569+00:00
+    updated_at: 2020-11-16 23:07:22.281633+00:00
+- model: expenses.expense
+  pk: 95
+  fields:
+    amount: 90313
+    description: Literally sartorial.
+    owner: 9
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:30.199102+00:00
+    updated_at: 2020-11-16 23:07:22.318739+00:00
+- model: expenses.expense
+  pk: 96
+  fields:
+    amount: 71548
+    description: Stumptown portland.
+    owner: 4
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:30.234590+00:00
+    updated_at: 2020-11-16 23:07:22.368799+00:00
+- model: expenses.expense
+  pk: 97
+  fields:
+    amount: 19812
+    description: 90s helvetica.
+    owner: 9
+    organization: 1
+    category: 2
+    created_at: 2020-07-23 01:59:30.274835+00:00
+    updated_at: 2020-11-16 23:07:22.417056+00:00
+- model: expenses.expense
+  pk: 98
+  fields:
+    amount: 7354
+    description: Dreamcatcher yolo.
+    owner: 12
+    organization: 2
+    category: 1
+    created_at: 2020-07-23 01:59:30.304072+00:00
+    updated_at: 2020-11-16 23:07:22.462550+00:00
+- model: expenses.expense
+  pk: 99
+  fields:
+    amount: 81731
+    description: Yr literally.
+    owner: 7
+    organization: 1
+    category: 1
+    created_at: 2020-07-23 01:59:30.348982+00:00
+    updated_at: 2020-11-16 23:07:22.495469+00:00
+- model: expenses.expense
+  pk: 100
+  fields:
+    amount: 43546
+    description: Blue bottle pug.
+    owner: 8
+    organization: 2
+    category: 2
+    created_at: 2020-07-23 01:59:30.391978+00:00
+    updated_at: 2020-11-16 23:07:22.531101+00:00
+- model: expenses.expense
+  pk: 101
+  fields:
+    amount: 45476
+    description: Hire a copywriter to create some job postings.
+    owner: 13
+    organization: 2
+    category: 3
+    created_at: 2020-07-23 01:59:30.560484+00:00
+    updated_at: 2020-11-16 23:07:22.578841+00:00
+- model: expenses.user
+  pk: 1
+  fields:
+    password: ''
+    last_login: 2020-11-17 14:21:43.051786+00:00
+    is_superuser: true
+    username: alice
+    first_name: ''
+    last_name: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.914989+00:00
+    email: alice@bar.com
+    title: CEO
+    manager: null
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 2
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: keri
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.916171+00:00
+    email: keri@foo.com
+    title: CFO
+    manager: 1
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 3
+  fields:
+    password: ''
+    last_login: 2020-11-14 14:24:26.060991+00:00
+    is_superuser: false
+    username: bhavik
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.917455+00:00
+    email: bhavik@bar.com
+    title: Senior Accountant
+    manager: 2
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 4
+  fields:
+    password: ''
+    last_login: 2020-11-17 14:11:21.499732+00:00
+    is_superuser: false
+    username: cora
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50+00:00
+    email: cora@bar.com
+    title: Accountant
+    manager: 3
+    groups:
+    - 1
+    user_permissions: []
+- model: expenses.user
+  pk: 5
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: deirdre
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.919392+00:00
+    email: deirdre@foo.com
+    title: Director of Engineering
+    manager: 1
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 6
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: ebrahim
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.920127+00:00
+    email: ebrahim@bar.com
+    title: Engineering Manager
+    manager: 5
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 7
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: frantz
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.920725+00:00
+    email: frantz@foo.com
+    title: Software Engineer
+    manager: 6
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 8
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: greta
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.921254+00:00
+    email: greta@bar.com
+    title: Director of Sales
+    manager: 1
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 9
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: han
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.921852+00:00
+    email: han@foo.com
+    title: Regional Sales Manager
+    manager: 8
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 10
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: iqbal
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.922384+00:00
+    email: iqbal@foo.com
+    title: Sales Rep
+    manager: 9
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 11
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: jose
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.922990+00:00
+    email: jose@bar.com
+    title: Accountant
+    manager: 3
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 12
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: lola
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.923564+00:00
+    email: lola@bar.com
+    title: CTO
+    manager: 1
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 13
+  fields:
+    password: ''
+    last_login: null
+    is_superuser: false
+    username: matz
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:39:50.924110+00:00
+    email: matz@bar.com
+    title: CEO
+    manager: null
+    groups: []
+    user_permissions: []
+- model: expenses.user
+  pk: 14
+  fields:
+    password: pbkdf2_sha256$216000$Fxx98fq0vhr6$mwCQ2ipXNq84A9LBD7UsopHlwLE2q1p+h1Z81lik8m8=
+    last_login: null
+    is_superuser: false
+    username: admin
+    first_name: ''
+    last_name: ''
+    is_staff: false
+    is_active: true
+    date_joined: 2020-11-14 03:59:49.908570+00:00
+    email: ''
+    title: ''
+    manager: null
+    groups: []
+    user_permissions: []
+- model: expenses.category
+  pk: 1
+  fields:
+    name: travel
+- model: expenses.category
+  pk: 2
+  fields:
+    name: food
+- model: expenses.category
+  pk: 3
+  fields:
+    name: tech
+- model: expenses.organization
+  pk: 1
+  fields:
+    name: Foo Industries
+- model: expenses.organization
+  pk: 2
+  fields:
+    name: Bar, Inc.
+- model: expenses.organizationmember
+  pk: 1
+  fields:
+    organization: 2
+    member: 1
+    role: member
+- model: expenses.organizationmember
+  pk: 2
+  fields:
+    organization: 1
+    member: 2
+    role: member
+- model: expenses.organizationmember
+  pk: 3
+  fields:
+    organization: 2
+    member: 3
+    role: member
+- model: expenses.organizationmember
+  pk: 4
+  fields:
+    organization: 2
+    member: 4
+    role: member
+- model: expenses.organizationmember
+  pk: 5
+  fields:
+    organization: 1
+    member: 5
+    role: member
+- model: expenses.organizationmember
+  pk: 6
+  fields:
+    organization: 2
+    member: 6
+    role: member
+- model: expenses.organizationmember
+  pk: 7
+  fields:
+    organization: 1
+    member: 7
+    role: member
+- model: expenses.organizationmember
+  pk: 8
+  fields:
+    organization: 2
+    member: 8
+    role: member
+- model: expenses.organizationmember
+  pk: 9
+  fields:
+    organization: 1
+    member: 9
+    role: member
+- model: expenses.organizationmember
+  pk: 10
+  fields:
+    organization: 1
+    member: 10
+    role: member
+- model: expenses.organizationmember
+  pk: 11
+  fields:
+    organization: 2
+    member: 11
+    role: member
+- model: expenses.organizationmember
+  pk: 12
+  fields:
+    organization: 2
+    member: 12
+    role: member
+- model: expenses.organizationmember
+  pk: 13
+  fields:
+    organization: 2
+    member: 13
+    role: member
+- model: expenses.organizationmember
+  pk: 14
+  fields:
+    organization: 2
+    member: 14
+    role: member

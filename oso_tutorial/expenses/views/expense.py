@@ -1,17 +1,46 @@
+from collections import defaultdict
+
 import json
+from django.db.models.query import Prefetch
 
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 
+from django_oso import Oso
 from django_oso.auth import authorize
 from django_oso.decorators import skip_authorization
 
-from ..models import Expense
+from ..apps import ExpensesConfig
+from ..models import Category, Expense, Organization
+
 
 def list_expenses(request):
-    expenses = Expense.objects.authorize(request, action="read")
-    return render(request, "list.html", {"expenses": expenses})
+    if ExpensesConfig.partial_enabled:
+        organizations = Organization.objects.authorize(request, action="read")
+        expenses = (
+            (Expense.objects.authorize(request, action="read"))
+            .prefetch_related(Prefetch("organization", queryset=organizations))
+            .prefetch_related("owner")
+            .prefetch_related("category")
+            .order_by("category__name")
+        )
+    else:
+        expenses = (
+            (Expense.objects.all())
+            .prefetch_related("organization")
+            .prefetch_related("owner")
+            .prefetch_related("category")
+            .order_by("category__name")
+        )
+        expenses = filter(lambda e: Oso.is_allowed(request.user, "read", e), expenses)
+
+    # group as a dict by category
+    res = defaultdict(list)
+    for expense in expenses:
+        res[expense.category].append(expense)
+
+    return render(request, "list.html", {"expenses": res.items()})
 
 
 def get_expense(request, id):
@@ -22,6 +51,7 @@ def get_expense(request, id):
 
     authorize(request, expense, action="read")
     return HttpResponse(expense.json())
+
 
 @require_http_methods(["PUT"])
 def submit_expense(request):

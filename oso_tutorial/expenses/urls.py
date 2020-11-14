@@ -19,7 +19,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('', expense.list_expenses),
+    path('', expense.list_expenses, name="index"),
     path('expenses/<int:id>/', expense.get_expense),
     path('expenses/submit/', expense.submit_expense),
     path('organizations/<int:id>/', organization.get_organization),
