@@ -16,7 +16,6 @@
     email: alice@foo.com
     title: CEO
     location_id: 1
-    organization_id: 1
     manager_id: null
 - model: expenses.User
   pk: 2
@@ -24,7 +23,6 @@
     email: keri@foo.com
     title: CFO
     location_id: 3
-    organization_id: 1
     manager_id: 1
 - model: expenses.User
   pk: 3
@@ -32,7 +30,6 @@
     email: bhavik@foo.com
     title: Senior Accountant
     location_id: 1
-    organization_id: 1
     manager_id: 2
 - model: expenses.User
   pk: 4
@@ -40,7 +37,6 @@
     email: cora@foo.com
     title: Accountant
     location_id: 1
-    organization_id: 1
     manager_id: 3
 - model: expenses.User
   pk: 5
@@ -48,7 +44,6 @@
     email: deirdre@foo.com
     title: Director of Engineering
     location_id: 1
-    organization_id: 1
     manager_id: 1
 - model: expenses.User
   pk: 6
@@ -56,7 +51,6 @@
     email: ebrahim@foo.com
     title: Engineering Manager
     location_id: 1
-    organization_id: 1
     manager_id: 5
 - model: expenses.User
   pk: 7
@@ -64,7 +58,6 @@
     email: frantz@foo.com
     title: Software Engineer
     location_id: 1
-    organization_id: 1
     manager_id: 6
 - model: expenses.User
   pk: 8
@@ -72,7 +65,6 @@
     email: greta@foo.com
     title: Director of Sales
     location_id: 1
-    organization_id: 1
     manager_id: 1
 - model: expenses.User
   pk: 9
@@ -80,7 +72,6 @@
     email: han@foo.com
     title: Regional Sales Manager
     location_id: 2
-    organization_id: 1
     manager_id: 8
 - model: expenses.User
   pk: 10
@@ -88,7 +79,6 @@
     email: iqbal@foo.com
     title: Sales Rep
     location_id: 2
-    organization_id: 1
     manager_id: 9
 - model: expenses.User
   pk: 11
@@ -96,7 +86,6 @@
     email: jose@foo.com
     title: Accountant
     location_id: 2
-    organization_id: 1
     manager_id: 3
 - model: expenses.User
   pk: 12
@@ -104,7 +93,6 @@
     email: lola@foo.com
     title: CTO
     location_id: 3
-    organization_id: 1
     manager_id: 1
 - model: expenses.User
   pk: 13
@@ -112,7 +100,6 @@
     email: matz@foo.com
     title: CEO
     location_id: 1
-    organization_id: 2
     manager_id: null
 
 # Expenses

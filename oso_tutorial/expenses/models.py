@@ -1,11 +1,14 @@
 import json
+from django.contrib.auth.models import AbstractUser
 
 from django.db import models
+from django_oso.models import AuthorizedModel
 
-class Expense(models.Model):
+class Expense(AuthorizedModel):
     amount = models.IntegerField()
 
-    user = models.ForeignKey('User', models.CASCADE)
+    owner = models.ForeignKey('User', models.CASCADE)
+    organization = models.ForeignKey('Organization', models.CASCADE)
     description = models.CharField(max_length=1024)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -23,21 +26,16 @@ class Expense(models.Model):
     def from_json(self, data):
         return self(**data)
 
-class Organization(models.Model):
-    name = models.CharField(max_length=1024)
 
-    def json(self):
-        return json.dumps({
-            'id': self.id,
-            'name': self.name
-        })
 
-class User(models.Model):
+class User(AbstractUser):
     email = models.CharField(max_length=256)
     title = models.CharField(max_length=256)
 
     location_id = models.IntegerField()
-    organization = models.ForeignKey(Organization, models.CASCADE)
+    organizations = models.ManyToManyField('Organization', through='OrganizationMember')
+    categories = models.ManyToManyField('Category', through='CategoryMember')
+
     manager = models.ForeignKey('User', models.SET_NULL, null=True)
 
     def json(self):
@@ -48,3 +46,27 @@ class User(models.Model):
             'location_id': self.location_id,
             'organization': self.organization.id,
         })
+
+class Category(models.Model):
+    name = models.CharField(max_length=1024)
+    members = models.ManyToManyField(User, through='CategoryMember')
+
+
+class Organization(AuthorizedModel):
+    name = models.CharField(max_length=1024)
+    members = models.ManyToManyField(User, through='OrganizationMember')
+
+    def json(self):
+        return json.dumps({
+            'id': self.id,
+            'name': self.name
+        })
+
+class OrganizationMember(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    organization = models.ForeignKey(Organization, on_delete=models.CASCADE)
+    role = models.CharField(max_length=64, default="member", choices=[("member", "Member"), ("owner", "Owner")])
+
+class CategoryMember(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)

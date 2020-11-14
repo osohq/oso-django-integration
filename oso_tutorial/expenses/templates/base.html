@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}oso-expenses{% endblock %}</title>
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <p>Welcome <em>@{{ user.username }}, #{{ user.id }}.</em></p>
+    <a href={% url 'logout' %}>Logout</a>
+    {% endif %}
+    <a href={% url 'login' %}>Login</a>
+
+    {% block contents %}
+    {% endblock %}
+</body>
+
+</html>

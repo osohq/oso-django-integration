@@ -1,27 +1,15 @@
-# Top-level rules
+# allow rule to enable role checking
+allow(actor, action, resource) if
+    user_in_role(actor, role, resource) and
+    role_allow(role, action, resource);
 
-allow(_user: User, "GET", http_request: HttpRequest) if
-    http_request.path = "/whoami/";
+role_allow("member", "read", _organization: expenses::Organization);
 
-# Allow by path segment
-allow(user, action, http_request: HttpRequest) if
-    http_request.path.strip("/").split("/") = [stem, *rest]
-    and allow_by_path(user, action, stem, rest);
+# get user role from OrganizationMember relation
+user_in_role(user: expenses::User, role, organization: expenses::Organization) if
+    user = organization.members and
+    organization.organizationmember__role = role;
 
-### Expense rules
-
-# by HTTP method
-allow_by_path(_user, "GET", "expenses", _rest);
-allow_by_path(_user, "PUT", "expenses", ["submit"]);
-
-# by model
-allow(user: User, "read", expense: Expense) if
-    submitted(user, expense);
-
-submitted(user: User, expense: Expense) if
-    user.id = expense.user_id;
-
-### Organization rules
-allow_by_path(_user, "GET", "organizations", _rest);
-allow(user: User, "read", organization: Organization) if
-    user.organization_id = organization.id;
+allow(user: expenses::User, "read", expense: expenses::Expense) if
+    user_in_role(user, "member", expense.category) and
+    user_in_role(user, "member", expense.organization);

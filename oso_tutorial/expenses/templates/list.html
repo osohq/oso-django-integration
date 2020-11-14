@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<h1>Expenses</h1>
+{% for expense in expenses %}
+<p>
+    <em>@{{ expense.created_by.username }}</em>
+    {{ expense.contents }}
+    <em>{{ expense.created_at|date:"SHORT_DATETIME_FORMAT" }}</em> #{{ expense.id }}
+
+</p>
+{% endfor %}
+
+
+{% endblock %}

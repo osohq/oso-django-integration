@@ -1,12 +1,18 @@
 import json
 
 from django.http import HttpResponse, HttpResponseNotFound
+from django.shortcuts import render
 from django.views.decorators.http import require_http_methods
 
 from django_oso.auth import authorize
 from django_oso.decorators import skip_authorization
 
-from expenses.models import Expense
+from ..models import Expense
+
+def list_expenses(request):
+    expenses = Expense.objects.authorize(request, action="read")
+    return render(request, "list.html", {"expenses": expenses})
+
 
 def get_expense(request, id):
     try:
@@ -18,7 +24,6 @@ def get_expense(request, id):
     return HttpResponse(expense.json())
 
 @require_http_methods(["PUT"])
-@skip_authorization
 def submit_expense(request):
     expense_data = json.loads(request.body)
 
