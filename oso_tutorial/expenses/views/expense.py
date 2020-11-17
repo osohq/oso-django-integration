@@ -22,27 +22,17 @@ def list_expenses(request):
         #     "organization"
         # )
         expenses = (
-            (Expense.objects.authorize(request, action="read"))
-            # .select_related("category")
-            .prefetch_related(
-                Prefetch(
-                    "category",
-                    queryset=Category.objects.select_related("organization"),
-                )
-            )
-            .select_related("owner")
+            Expense.objects.authorize(request, action="read")
             .select_related("category")
+            .select_related("category__organization")
+            .select_related("owner")
             .order_by("category__name")
         )
     else:
         expenses = (
-            (Expense.objects.all())
-            .prefetch_related(
-                Prefetch(
-                    "category",
-                    queryset=Category.objects.all().select_related("organization"),
-                )
-            )
+            Expense.objects.all()
+            .select_related("category")
+            .select_related("category__organization")
             .select_related("owner")
             .order_by("category__name")
         )

@@ -24,16 +24,6 @@ class Expense(AuthorizedModel):
         return self(**data)
 
 
-class UserManager(models.Manager):
-    def get_queryset(self):
-        return (
-            super()
-            .get_queryset()
-            .prefetch_related("organizations")
-            .prefetch_related("categories")
-        )
-
-
 class User(AbstractUser):
     # basic info
     email = models.CharField(max_length=256)
@@ -43,8 +33,6 @@ class User(AbstractUser):
 
     organizations = models.ManyToManyField("Organization", through="OrganizationMember")
     categories = models.ManyToManyField("Category", through="CategoryMember")
-
-    objects = UserManager()
 
 
 class Organization(AuthorizedModel):
@@ -61,13 +49,13 @@ class Category(AuthorizedModel):
         return f"{self.name.title()} at {self.organization.name}"
 
 
-class OrganizationMember(models.Model):
+class OrganizationMember(AuthorizedModel):
     organization = models.ForeignKey(Organization, on_delete=CASCADE)
     member = models.ForeignKey(User, on_delete=CASCADE)
     role = models.CharField(max_length=64, default="member")
 
 
-class CategoryMember(models.Model):
+class CategoryMember(AuthorizedModel):
     category = models.ForeignKey(Category, on_delete=CASCADE)
     member = models.ForeignKey(User, on_delete=CASCADE)
     role = models.CharField(
