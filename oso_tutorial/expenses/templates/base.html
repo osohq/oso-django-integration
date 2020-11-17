@@ -23,7 +23,7 @@
         {% endfor %}
 
         {% for cat in user.categorymember_set.all %}
-        <p>Role: {{ cat.role|title }} for {{ cat.category.name|title }} at {{ cat.category.organization.name|title}}
+        <p>Role: {{ cat }}
         </p>
         {% endfor %}
 

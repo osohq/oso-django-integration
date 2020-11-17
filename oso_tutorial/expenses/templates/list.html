@@ -22,7 +22,7 @@
         <td>{{ expense.owner.username | title }}</td>
         <td>{{ expense.description }}</td>
         <td>${{ expense.amount }}</td>
-        <td>{{ expense.organization.name | title }}</td>
+        <td>{{ expense.category.organization.name | title }}</td>
     </tr>
     {% endfor %}
 </table>

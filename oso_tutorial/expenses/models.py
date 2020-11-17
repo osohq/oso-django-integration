@@ -13,7 +13,6 @@ class Expense(AuthorizedModel):
 
     # ownership/category
     owner = models.ForeignKey("User", CASCADE)
-    organization = models.ForeignKey("Organization", CASCADE)
     category = models.ForeignKey("Category", CASCADE)
 
     # time info
@@ -23,6 +22,16 @@ class Expense(AuthorizedModel):
     @classmethod
     def from_json(self, data):
         return self(**data)
+
+
+class UserManager(models.Manager):
+    def get_queryset(self):
+        return (
+            super()
+            .get_queryset()
+            .prefetch_related("organizations")
+            .prefetch_related("categories")
+        )
 
 
 class User(AbstractUser):
@@ -35,6 +44,8 @@ class User(AbstractUser):
     organizations = models.ManyToManyField("Organization", through="OrganizationMember")
     categories = models.ManyToManyField("Category", through="CategoryMember")
 
+    objects = UserManager()
+
 
 class Organization(AuthorizedModel):
     name = models.CharField(max_length=1024)
@@ -45,6 +56,9 @@ class Category(AuthorizedModel):
     name = models.CharField(max_length=1024)
     members = models.ManyToManyField(User, through="CategoryMember")
     organization = models.ForeignKey(Organization, on_delete=CASCADE)
+
+    def __str__(self):
+        return f"{self.name.title()} at {self.organization.name}"
 
 
 class OrganizationMember(models.Model):
@@ -59,3 +73,6 @@ class CategoryMember(models.Model):
     role = models.CharField(
         max_length=64,
     )
+
+    def __str__(self):
+        return f"{self.role.title()} for {self.category}"
