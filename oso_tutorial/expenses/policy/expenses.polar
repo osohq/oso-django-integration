@@ -24,30 +24,29 @@ user_in_role(user: expenses::User, "viewer", e: expenses::Expense) if
     user.title = "CEO";
 
 
-# Users can see their own organizations
-allow(user: expenses::User, "read", organization: expenses::Organization) if
-    in_org(organization, user);
+# Members can see their own organizations
+role_allow("member", "read", _: expenses::Organization);
 
-
-allow(user: expenses::User, "read", category: expenses::Category) if
-    in_category(user, category);
-
-# Partial supported: use partial lookup on ID
-in_org(org, obj) if
+# Partials supported: use partial lookup on ID
+user_in_role(user: expenses::User, role, org: expenses::Organization) if
     ExpensesConfig.partial_enabled and
-    org.id in obj.organizations.values_list("id", flat: true);
+    org.id in user.organizations.values_list("id", flat: true) and
+    org.organizationmember__role = role;
 
 # Partials not supported: use django iterator
-in_org(org, obj) if
+user_in_role(user: expenses::User, role, org: expenses::Organization) if
     not ExpensesConfig.partial_enabled and
-    org in obj.organizations.all();
+    org in user.organizations.all() and
+    org.organizationmember__role = role;
 
-# Partial supported: use partial lookup on ID
-# in_category(obj, cat) if
-#     ExpensesConfig.partial_enabled and
-#     cat.members = obj;
 
-# # Partials not supported: use django iterator
-# in_category(obj, cat) if
-#     not ExpensesConfig.partial_enabled and
-#     cat in obj.organizations.all();
+role_allow("auditor", "read", _: expenses::Expense);
+
+user_in_role(user: expenses::User, "auditor", expense: expenses::Expense) if
+    ExpensesConfig.partial_enabled and
+    user.id = expense.category.members and
+    expense.category.members.categorymember__role = "auditor";
+
+user_in_role(user: expenses::User, "auditor", expense: expenses::Expense) if
+    not ExpensesConfig.partial_enabled and
+    user in expense.category.members.filter(categorymember__role: "auditor");

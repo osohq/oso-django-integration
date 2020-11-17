@@ -13,3 +13,14 @@ The application itself is a simple Django
 web server, implementing an expenses application.
 
 We used the ``oso`` & ``django-oso`` libraries.
+
+
+## Test data
+
+Load the fixture data with ``./manage.py loaddata expenses/fixtures/new_data.yaml``
+
+You have:
+
+- Alice, the CEO of Bar, Inc can see all Bar expenses
+- Other users can see their own expenses
+- Frantz is the Food auditor and can see all Food expenses for Foo and Bar

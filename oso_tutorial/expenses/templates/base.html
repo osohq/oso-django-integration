@@ -17,13 +17,16 @@
     <div class="container">
         {% if user.is_authenticated %}
         <h3>Welcome <em>{{ user.username | title }} ({{ user.email }}).</em></h3>
-        {% if user.organizations.all|length == 1 %}
-        <p>Company: {{ user.organizations.first.name }} </p>
-        {% elif user.organizations.all|length > 1 %}
+
         {% for org in user.organizations.all %}
         <p>Company: {{ org.name }} </p>
         {% endfor %}
-        {% endif %}
+
+        {% for cat in user.categorymember_set.all %}
+        <p>Role: {{ cat.role|title }} for {{ cat.category.name|title }} at {{ cat.category.organization.name|title}}
+        </p>
+        {% endfor %}
+
         <p>Title: {{ user.title }} </p>
         <a href={% url 'logout' %}><button>Logout</button></a>
         {% endif %}

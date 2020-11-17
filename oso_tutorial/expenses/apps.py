@@ -6,7 +6,7 @@ from django_oso import Oso
 class ExpensesConfig(AppConfig):
     name = "expenses"
 
-    partial_enabled = True
+    partial_enabled = False
 
     def ready(self):
         Oso.register_class(ExpensesConfig)

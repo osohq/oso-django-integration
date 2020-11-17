@@ -36,14 +36,15 @@ class User(AbstractUser):
     categories = models.ManyToManyField("Category", through="CategoryMember")
 
 
-class Category(AuthorizedModel):
-    name = models.CharField(max_length=1024)
-    members = models.ManyToManyField(User, through="CategoryMember")
-
-
 class Organization(AuthorizedModel):
     name = models.CharField(max_length=1024)
     members = models.ManyToManyField(User, through="OrganizationMember")
+
+
+class Category(AuthorizedModel):
+    name = models.CharField(max_length=1024)
+    members = models.ManyToManyField(User, through="CategoryMember")
+    organization = models.ForeignKey(Organization, on_delete=CASCADE)
 
 
 class OrganizationMember(models.Model):
@@ -55,7 +56,6 @@ class OrganizationMember(models.Model):
 class CategoryMember(models.Model):
     category = models.ForeignKey(Category, on_delete=CASCADE)
     member = models.ForeignKey(User, on_delete=CASCADE)
-    organization = models.ForeignKey(Organization, on_delete=CASCADE)
     role = models.CharField(
         max_length=64,
     )

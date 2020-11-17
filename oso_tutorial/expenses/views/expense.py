@@ -21,16 +21,16 @@ def list_expenses(request):
         expenses = (
             (Expense.objects.authorize(request, action="read"))
             .prefetch_related(Prefetch("organization", queryset=organizations))
-            .prefetch_related("owner")
-            .prefetch_related("category")
+            .select_related("owner")
+            .select_related("category")
             .order_by("category__name")
         )
     else:
         expenses = (
             (Expense.objects.all())
             .prefetch_related("organization")
-            .prefetch_related("owner")
-            .prefetch_related("category")
+            .select_related("owner")
+            .select_related("category")
             .order_by("category__name")
         )
         expenses = filter(lambda e: Oso.is_allowed(request.user, "read", e), expenses)
