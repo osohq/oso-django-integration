@@ -40,12 +40,20 @@ user_in_role(user: expenses::User, role, org: expenses::Organization) if
     org.organizationmember__role = role;
 
 
+role_allow("auditor", "read", _: expenses::Organization);
 role_allow("auditor", "read", _: expenses::Expense);
+
+user_in_role(user: expenses::User, "auditor", org: expenses::Organization) if
+    ExpensesConfig.partial_enabled and
+    org.id in user.categories.filter(categorymember__role: "auditor").values_list("organization_id", flat: true);
 
 user_in_role(user: expenses::User, "auditor", expense: expenses::Expense) if
     ExpensesConfig.partial_enabled and
-    user.id = expense.category.members and
-    expense.category.members.categorymember__role = "auditor";
+    expense.category in user.categories.filter(categorymember__role: "auditor");
+
+user_in_role(user: expenses::User, "auditor", org: expenses::Organization) if
+    not ExpensesConfig.partial_enabled and
+    org in user.categories.filter(categorymember__role: "auditor").all();
 
 user_in_role(user: expenses::User, "auditor", expense: expenses::Expense) if
     not ExpensesConfig.partial_enabled and
