@@ -52,7 +52,6 @@ class Category(AuthorizedModel):
 class OrganizationMember(AuthorizedModel):
     organization = models.ForeignKey(Organization, on_delete=CASCADE)
     member = models.ForeignKey(User, on_delete=CASCADE)
-    role = models.CharField(max_length=64, default="member")
 
 
 class CategoryMember(AuthorizedModel):

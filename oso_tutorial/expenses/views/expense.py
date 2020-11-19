@@ -18,9 +18,6 @@ from ..models import Category, Expense, Organization
 
 def list_expenses(request):
     if ExpensesConfig.partial_enabled:
-        # categories = Category.objects.authorize(request, action="read").select_related(
-        #     "organization"
-        # )
         expenses = (
             Expense.objects.authorize(request, action="read")
             .select_related("category")
