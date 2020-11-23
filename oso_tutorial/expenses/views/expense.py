@@ -17,6 +17,7 @@ from ..models import Category, Expense, Organization
 
 
 def list_expenses(request):
+    orgs = Organization.objects.authorize(request, action="read")
     if ExpensesConfig.partial_enabled:
         expenses = (
             Expense.objects.authorize(request, action="read")
