@@ -1,27 +1,27 @@
-### Expense app authorization policy
+### oso demo
 
-### Step 1: Simple ABAC
+# users can see their own expenses
+allow(user: expenses::User, "read", expense: expenses::Expense) if
+    user = expense.owner;
 
-# # expense submitters are viewers
-# allow(user: expenses::User, "read", e: expenses::Expense) if
-#     user = e.owner;
+allow(user: expenses::User, "read", org: expenses::Organization) if
+    org in user.organizations.all();
 
-### Step 2: RBAC
+# users can see expenses in their organization
+user_in_org(user, organization) if
+    user in organization.members;
 
-# allow(user, action, resource) if
-#     rbac_allow(user, action, resource);
+allow(user: expenses::User, "read", expense: expenses::Expense) if
+    user_in_org(user, expense.category.organization)
+    and user.title = "CEO";
 
-# # RBAC policy structure
-# rbac_allow(user: expenses::User, action, resource) if
-#     user_in_role(user, role, resource) and
-#     role_allow(role, action, resource);
+# users can see expenses that they are the auditor for
 
-# ### Three roles: expense viewer, org member, org/category auditor
+user_in_cat_role(user, role_name, category) if
+    cm in category.categorymember and
+    cm.role = role_name and
+    cm.member = user;
 
-# # Members can see their own organizations
-# role_allow("member", "read", _: expenses::Organization);
-
-# # Expense viewers and auditors
-# role_allow("viewer", "read", _: expenses::Expense);
-# role_allow("auditor", "read", _: expenses::Expense);
+allow(user: expenses::User, "read", expense: expenses::Expense) if
+    user_in_cat_role(user, "auditor", expense.category);
 

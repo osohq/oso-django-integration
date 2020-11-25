@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "django_extensions",
 ]
 
+OSO_RELOAD_SERVER = False
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_oso.middleware.ReloadPolicyMiddleware",
 ]
 
 ROOT_URLCONF = "oso_tutorial.urls"
