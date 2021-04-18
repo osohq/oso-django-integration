@@ -20,6 +20,9 @@ from expenses import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('cbv/home', views.cbv.MyView.as_view()),
+    path('cbv/', views.cbv.ListExpenses.as_view()),
+    path('cbv/<pk>', views.cbv.ExpenseView.as_view()),
     path('expenses/<int:id>/', views.expense.get_expense),
     path('expenses/submit/', views.expense.submit_expense),
     path('organizations/<int:id>/', views.organization.get_organization),

@@ -2,7 +2,9 @@ import json
 
 from django.db import models
 
-class Expense(models.Model):
+from django_oso.models import AuthorizedModel
+
+class Expense(AuthorizedModel):
     amount = models.IntegerField()
 
     user = models.ForeignKey('User', models.CASCADE)
